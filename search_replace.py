@@ -20,7 +20,7 @@ to follow the order of the array.
 
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 
 import json
@@ -32,7 +32,7 @@ def get_table(table_source):
     if table_source.startswith("@"):
         table = json.load(table_source[1:])
     else:
-        json.loads(table_source)
+        table = json.loads(table_source)
     if isinstance(table, dict):
         assert all(isinstance(key, str) for key in table.keys())
         assert all(isinstance(value, str) for value in table.values())
