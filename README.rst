@@ -3,7 +3,9 @@
 ================
 
 ``search-replace`` is a trivial Python script that implements
- search/replace in text files.
+search/replace in text files.
+
+https://github.com/luismsgomes/search-replace
 
 Copyright (c) 2019 Luís Gomes <luismsgomes@gmail.com>
 
