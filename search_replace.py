@@ -20,7 +20,7 @@ to follow the order of the array.
 
 """
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 
 import json
@@ -30,7 +30,8 @@ from openfile import openfile
 
 def get_table(table_source):
     if table_source.startswith("@"):
-        table = json.load(table_source[1:])
+        with openfile(table_source[1:], "rt") as f:
+            table = json.loads(f.read())
     else:
         table = json.loads(table_source)
     if isinstance(table, dict):
